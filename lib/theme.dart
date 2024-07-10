@@ -5,7 +5,7 @@ class AppTheme {
 
   static const _primaryColorLight = Colors.lightBlueAccent;
 
-  static const _primaryColorDark = Colors.lightGreenAccent;
+  static const _primaryColorDark = Color.fromARGB(255, 112, 123, 98);
 
   static final ThemeData lightTheme = ThemeData(
     colorScheme: ColorScheme.fromSeed(
