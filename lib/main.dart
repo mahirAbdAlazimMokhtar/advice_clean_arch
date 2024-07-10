@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeService>(builder: (context, themeService, child) {
+    return Consumer<ThemeService>(builder:
+     (context, themeService, child) {
       return MaterialApp(
         themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
         theme: AppTheme.lightTheme,
