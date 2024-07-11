@@ -1,9 +1,9 @@
+import 'package:adviser_clean_arch/2_application/screens/advice/cubit_advice_screen.dart';
 import 'package:adviser_clean_arch/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '2_application/core/services/theme_service.dart';
-import '2_application/screens/advice/bloc_advic_screen.dart';
+
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
-        home: const BlocAdvicePageWrapperProvider(),
+        home: const CubitAdvicePageWrapperProvider(),
       );
     });
   }
