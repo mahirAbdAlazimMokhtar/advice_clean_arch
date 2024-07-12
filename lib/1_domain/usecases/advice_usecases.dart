@@ -1,11 +1,14 @@
 import 'package:adviser_clean_arch/1_domain/entities/advice_entity.dart';
 import 'package:dartz/dartz.dart';
 
-import '../../0_data/repositories/advice_repo_impl.dart';
+
 import '../failures/failures.dart';
+import '../repositories/advice_repo.dart';
 
 class AdviceUsecases {
-  final adviceRepo = AdviceRepoImpl();
+  final AdviceRepo adviceRepo ;
+
+  AdviceUsecases({required this.adviceRepo});
   Future<Either<Failure, AdviceEntity>> getAdvice() async {
     return adviceRepo.getAdviceFromDatasource();
   }

@@ -12,8 +12,8 @@ const cachedFailureMessage = 'uups , Cache Error, please try again';
 const generalFailureMessage = 'Unexpected Error, please try again';
 
 class AdviceBloc extends Bloc<AdviceEvent, AdviceState> {
-  final AdviceUsecases adviceUsecases = AdviceUsecases();
-  AdviceBloc() : super(AdviceInitial()) {
+  final AdviceUsecases adviceUsecases ;
+  AdviceBloc(this.adviceUsecases) : super(AdviceInitial()) {
     on<AdviceRequestedEvent>((event, emit) async {
       emit(AdviceStateLoading());
       final failureOrGetAdviceData = await adviceUsecases.getAdvice();

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
+import '../../../di_injection.dart';
 import '../../core/services/theme_service.dart';
 import 'widgets/advice_field.dart';
 
@@ -14,7 +15,7 @@ class CubitAdvicePageWrapperProvider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AdvicerCubit(),
+      create: (context) => sl<AdvicerCubit>() ,
       child: const AdviserScreen(),
     );
   }

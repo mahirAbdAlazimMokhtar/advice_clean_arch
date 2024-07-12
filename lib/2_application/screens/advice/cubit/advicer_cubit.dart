@@ -11,8 +11,8 @@ const cachedFailureMessage = 'uups , Cache Error, please try again';
 const serverFailureMessage = 'Server Error, please try again';
 
 class AdvicerCubit extends Cubit<AdvicerState> {
-  AdvicerCubit() : super(AdvicerInitial());
-  final AdviceUsecases adviceUsecases = AdviceUsecases();
+  AdvicerCubit({required this.adviceUsecases}) : super(AdvicerInitial());
+  final AdviceUsecases adviceUsecases ;
   void requestedGetAdvice() async {
     emit(AdvicerLoading());
 
